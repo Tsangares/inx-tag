@@ -4,9 +4,17 @@ const Router = require('@koa/router');
 const grpc = require("@grpc/grpc-js");
 const protoLoader = require("@grpc/proto-loader");
 const util = require("util");
-const PROTO_PATH = "../../proto/inx.proto";
+const PROTO_PATH = "proto/inx.proto";
+const fs = require('fs');
 
-const INX_ADDRESS = "localhost:9029";
+function checkFileExists(file) {
+    return fs.promises.access(file, fs.constants.F_OK)
+             .then(() => require('dotenv').config())
+             .catch(() => require('dotenv').config({ path: '.env.default' })
+             )
+  }
+
+const INX_ADDRESS = "";
 
 const protoOptions = {
     keepCase: true,
