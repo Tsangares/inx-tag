@@ -7,14 +7,7 @@ const util = require("util");
 const PROTO_PATH = "proto/inx.proto";
 const fs = require('fs');
 
-function checkFileExists(file) {
-    return fs.promises.access(file, fs.constants.F_OK)
-             .then(() => require('dotenv').config())
-             .catch(() => require('dotenv').config({ path: '.env.default' })
-             )
-  }
-
-const INX_ADDRESS = "";
+const INX_ADDRESS = process.env.HORNET_URI || "localhost:9092";
 
 const protoOptions = {
     keepCase: true,
@@ -24,7 +17,7 @@ const protoOptions = {
     oneofs: true,
 };
 
-
+console.log(INX_ADDRESS)
 // Load the `inx.proto` file
 const packageDefinition = protoLoader.loadSync(PROTO_PATH, protoOptions);
 const INX = grpc.loadPackageDefinition(packageDefinition).inx.INX;
