@@ -7,7 +7,7 @@ const util = require("util");
 const PROTO_PATH = "proto/inx.proto";
 const fs = require('fs');
 
-const INX_ADDRESS = process.env.HORNET_URI || "localhost:9092";
+const INX_ADDRESS = process.env.HORNET_URI || "localhost:9029";
 
 const protoOptions = {
     keepCase: true,
