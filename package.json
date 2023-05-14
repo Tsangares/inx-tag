@@ -1,0 +1,35 @@
+{
+  "name": "inx-tag",
+  "version": "1.0.0",
+  "description": "inx plugin for tags on blocks",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Tsangares/inx-tag.git"
+  },
+  "keywords": [
+    "iota",
+    "shimmer",
+    "inx",
+    "hornet",
+    "plugin"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tsangares/inx-tag/issues"
+  },
+  "homepage": "https://github.com/Tsangares/inx-tag#readme",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.8.14",
+    "@grpc/proto-loader": "^0.7.7",
+    "@koa/router": "^12.0.0",
+    "grpc": "^1.24.11",
+    "koa": "^2.14.2",
+    "koa-logger": "^3.2.1",
+    "util": "^0.12.5"
+  }
+}
